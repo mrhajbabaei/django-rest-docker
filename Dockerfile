@@ -1,7 +1,7 @@
 FROM python:3.8-alpine
 
 ENV PYTHONUNBUFFERED 1
-COPY ./requirement.txt /requirement.txt
+COPY ./requirements.txt /requirements.txt
 RUN pip install -r /requiremnt.txt
 
 RUN mkdir /app
