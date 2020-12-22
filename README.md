@@ -11,3 +11,7 @@ docker-compose run app (service name on docker-compose.yml file) sh -c "django-a
 2- Core App (our api and database management)
 
 docker-compose run app sh -c "python manage.py startapp core"
+
+3- \*\*Destruction container completely and make it again from scratch:
+
+sudo docker-compose up --force-recreate --build --remove-orphans --always-recreate-deps --renew-anon-volumes
