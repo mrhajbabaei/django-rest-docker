@@ -14,7 +14,7 @@ services:
              python manage.py runserver 0.0.0.0:8000"
     environment:
       - DB_HOST=db
-      - DB_NAME=postgres
+      - DB_NAME=app
       - DB_USER=postgres
       - DB_PASS=supersecretpassword
     depends_on:
@@ -23,6 +23,6 @@ services:
   db:
     image: postgres:13.1-alpine
     environment:
-      - POSTGRESS_DB=app
+      - POSTGRES_DB=app
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=supersecretpassword
