@@ -85,4 +85,4 @@ class PublicTest(TestCase):
         res = self.client.post(TOKEN_URL, {'email': 'one', 'password': ''})
 
         self.assertNotIn('token', res.data)
-        self.assertNotIn(res.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertEqual(res.status_code, status.HTTP_400_BAD_REQUEST)
