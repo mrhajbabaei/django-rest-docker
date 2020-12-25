@@ -27,7 +27,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'rest_framework.authtoken',
     'core',
+    'users'
 ]
 
 MIDDLEWARE = [
@@ -63,8 +66,7 @@ WSGI_APPLICATION = 'app.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-print('--<>', os.environ.get('DB_HOST'), os.environ.get('DB_NAME'),
-      os.environ.get('DB_USER'), os.environ.get('DB_PASS'))
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
